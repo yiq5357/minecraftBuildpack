@@ -11,6 +11,7 @@ fi
 scmd=“autossh -M 0 -R mcats${mc_port}:localhost:${mc_port} serveo.net”
 echo "Starting ssh..."
 eval "$scmd &"
+ngrok_pid=$!
 
 # Do an inline sync first, then start the background job
 echo "Starting sync..."
