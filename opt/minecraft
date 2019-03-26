@@ -8,7 +8,7 @@ if [ -z "$NGROK_API_TOKEN" ]; then
   exit 1
 fi
 
-scmd=“autossh -M 0 -R mcats${mc_port}:localhost:${mc_port} serveo.net”
+scmd=“autossh -M 0 -R mcats.serveo.net:${mc_port}:localhost:${mc_port} serveo.net”
 echo "Starting ssh..."
 eval "$scmd &"
 ngrok_pid=$!
