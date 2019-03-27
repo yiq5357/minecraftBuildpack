@@ -16,6 +16,8 @@ bin/sync
 eval "while true; do sleep ${AWS_SYNC_INTERVAL:-60}; bin/sync; done &"
 sync_pid=$!
 
+cat "IP: mcats.serveo.net" > ngrok.log
+
 # create server config
 echo "server-port=${mc_port}" >> /app/server.properties
 for f in whitelist banned-players banned-ips ops; do
