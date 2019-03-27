@@ -5,7 +5,7 @@ port=${1:-${PORT:-8080}}
 
 
 
-scmd=“autossh -M 0 -R mcats.serveo.net:${mc_port}:localhost:${mc_port} serveo.net”
+scmd=“autossh -M 0 -R minecraftC.serveo.net:${mc_port}:localhost:${mc_port} serveo.net”
 echo "Starting ssh..."
 eval "$scmd &"
 ngrok_pid=$!
